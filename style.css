@@ -1,60 +1,149 @@
 /*
 Theme Name: LearningWordPress
-Author: Jorge
+Author: LearnWebCode
+Author URI: http://www.youtube.com/user/LearnWebCode
 Version: 1.0
 */
 
+html {
+	padding: 0;
+	margin: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #333;
+	padding: 0;
+	margin: 0;
+	font-family: Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
 }
 
 a:link,
 a:visited {
-    color: #006ec3;
+	color: #006ec3;
 }
 
 p {
-    line-height: 1.65em;
+	line-height: 1.65em;
+	margin: 0 0 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 1em 0;
+	font-weight: normal;
 }
 
 /* General Layout */
-
 div.container {
-    max-width: 920px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+	max-width: 920px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
+/* Content Area */
 article.post {
-    border-bottom: 2px dotted #bbbbbb;
+	border-bottom: 1px dotted #DDD;
+	margin-bottom: 20px;
 }
 
 article.post:last-of-type {
-    border-bottom: none;
+	border-bottom: none;
 }
+
+/* Aside Styles */
+article.post-aside,
+article.post-link {
+	font-size: 125%;
+	background-color: #FFF5CB;
+	padding: 20px 20px 1px 20px;
+	border-bottom: none;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+}
+
+.mini-meta {
+	font-size: 68%;
+	margin: 0;
+	color: #777;
+	display: block;
+}
+
+.mini-meta a {
+	color: #777;
+	text-decoration: none;
+}
+
+/* Link Post Format Styles */
+article.post-link {
+	background-color: #E0EBFF;
+	padding: 0;
+}
+
+article.post-link a {
+	display: block;
+	text-decoration: none;
+	padding: 20px;
+}
+
+.post-link-text {
+	line-height: 1.65em;
+	color: #004982;
+}
+
+/* Gallery Post Format Styles */
+article.post-gallery {
+	background-color: #222;
+	color: #FFF;
+	padding: 20px;
+	border-bottom: none;
+}
+
+article.post-gallery .gallery img {
+	border: none!important;
+}
+
+article.post-gallery .wp-caption-text {
+	font-size: 86%;
+}
+
+article.post-gallery h2 {
+	text-align: center;
+}
+
+article.post-gallery h2 a {
+	color: #FFF;
+	text-decoration: none;
+	font-size: 130%;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
 
 /* Header */
-
 .site-header {
-    border-bottom: 2px solid #999;
+	border-bottom: 1px solid #DDD;
+	margin-bottom: 20px;
+	padding: 30px 0 0 0;
 }
 
-/* Footer */
-
-.site-footer {
-    margin-top: 30px;
-    border-bottom: 2px solid #999;
-
+.site-header h1 {
+	margin: 0;
 }
 
-/* Navigation Menu */
+.site-header h1 a:link,
+.site-header h1 a:visited {
+	text-decoration: none;
+}
 
+.site-header h5 {
+	margin: 0;
+}
+
+/* Standard Nav Menu */
 .site-nav ul {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .site-nav ul:before, .site-nav ul:after { content: ""; display: table; }
@@ -62,183 +151,220 @@ article.post:last-of-type {
 .site-nav ul { *zoom: 1; }
 
 .site-nav ul li {
-    list-style: none;
-    float: left;
+	list-style: none;
+	float: left;
 }
 
-/* Site Header Menu */
-.site-header nav ul li {
-    margin-right: 5px;
+.site-nav ul li a:link,
+.site-nav ul li a:visited {
+	display: block;
 }
+
+/* Header Nav Menu */
+.site-header nav {
+	margin-top: 30px;
+}
+
+.site-header nav ul li {
+	margin-right: 5px;
+}
+
 .site-header nav ul li a:link,
 .site-header nav ul li a:visited {
-    display: block;
-    padding: 10px 18px;
-    border: 1px solid #BBB;
-    border-bottom: none;
-    text-decoration: none;
+	padding: 10px 17px;
+	text-decoration: none;
+	border: 1px solid #DDD;
+	border-bottom: none;
 }
 
 .site-header nav ul li a:hover {
-    background-color: #ECECEC;
+	background-color: #ECECEC;
 }
 
-.site-header nav ul li.current-menu-item a:link, /* .current-menu-item es agregada automáticamente desde wordpress? */
+.site-header nav ul li.current-menu-item a:link,
 .site-header nav ul li.current-menu-item a:visited,
-.site-header nav ul li.current-page-ancestor a:visited,
-.site-header nav ul li.current-page-ancestor a:link {
-    background-color: #006ec3;
-    color: #FFF;
+.site-header nav ul li.current-page-ancestor a:link,
+.site-header nav ul li.current-page-ancestor a:visited {
+	font-weight: bold;
+	background-color: #006ec3;
+	color: #FFF;
 }
 
-/* Footer Menu */
+/* Main column */
+.main-column {
+	width: 66%;
+	float: left;
+}
+
+/* Secondary column */
+.secondary-column {
+	width: 30%;
+	float: right;
+}
+
+/* Footer widget area */
+.footer-widget-area {
+	width: 25%;
+	float: left;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+
+/* Footer */
+.site-footer {
+	margin-top: 30px;
+	border-top: 1px solid #DDD;
+	font-size: 84%;
+}
+
+/* Footer Nav Menu */
+.site-footer nav {
+	margin: 30px 0 10px 0;
+}
+
 .site-footer nav ul li {
-    margin-right: 10px;
-    padding-right: 10px;
-    border-right: 1px dotted #BBB;
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px solid #DDD;
 }
 
-.site-footer nav ul li:last-of-type { /* agregado por mí */
-    border-right: none;
+.site-footer nav ul li:last-of-type {
+	border-right: none;
 }
 
 /* Page Layout */
-
 article.page h2 {
-    font-size: 300%;
+	font-size: 225%;
+	margin-bottom: 15px;
 }
 
 /* Clearfix */
-.clarfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after {clear: both; }
-.clarfix { *zoom: 1; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
 
 
-/* 2 column title layout */
-
+/* Two Column Title Layout */
 div.title-column {
-    width: 30%;
-    float: left;
+	width: 30%;
+	float: left;
 }
 
 div.text-column {
-    width: 70%;
-    float: right;
+	width: 70%;
+	float: right;
 }
 
-/* Info Box styles */
-
+/* Info Box Styles */
 div.info-box {
-    width: 30%;
-    float: right;
-    margin: 0 0 30px 30px;
-    padding: 20px;
-    background-color: #EEE;
+	width: 30%;
+	float: right;
+	margin: 0 0 30px 30px;
+	padding: 20px;
+	background-color: #EEE;
 }
 
 div.info-box h4 {
-    margin-bottom: 6px;
+	margin-bottom: 6px;
 }
 
 div.info-box p {
-    font-size: 85%;
+	font-size: 85%;
 }
 
-/* Children links */
-
-.children_links {
-    margin-bottom: 20px;
-    font-size: 80%;
+/* Children Links */
+.children-links {
+	margin-bottom: 20px;
+	font-size: 80%;
 }
 
-.children_links a:link,
-.children_links a:visited {
-    text-decoration: none;
+.children-links a:link,
+.children-links a:visited {
+	text-decoration: none;
+	padding-bottom: 2px;
 }
 
-.children_links ul {
-    float: left;
+.children-links ul {
+	float: left;
 }
 
-.children_links li {
-    margin-right: 20px;
+.children-links li {
+	margin-right: 20px;
 }
 
-.children_links .parent-link {
-    float: left;
-    margin-right: 20px;
-    padding-right: 20px;
-    border-right: 1px solid #DDD;
-    font-size: 120%;
-    font-weight: bold;
+.children-links .parent-link {
+	float: left;
+	margin-right: 20px;
+	padding-right: 20px;
+	border-right: 1px solid #DDD;
+	font-size: 120%;
+	font-weight: bold;
 }
 
-.children_links .parent-link a:link,
-.children_links .parent-link a:visited {
-    color: #333;
+.children-links .parent-link a:link,
+.children-links .parent-link a:visited {
+	color: #333;
 }
 
-.children_links .current_page_item a:link,
-.children_links .current_page_item a:visited {
-    border-bottom: 1px solid #DDD;
-    color: #333;
-    cursor: default;
+.children-links .current_page_item a:link,
+.children-links .current_page_item a:visited {
+	border-bottom: 1px solid #DDD;
+	color: #333;
+	cursor: default;
 }
 
-/* Post styles */
-
+/* Post Styles */
 .post h2 {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 p.post-info {
-    font-size: 87%;
-    color: #999;
+	font-size: 87%;
+	color: #999;
 }
 
 p.post-info a:link,
 p.post-info a:visited {
-    color: #999;
+	color: #999;
 }
 
-/* Image styles */
 
+/* Image Styles */
 img {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 .has-thumbnail {
-    position: relative;
-    padding-left: 200px;
+	position: relative;
+	padding-left: 200px;
 }
 
 .post-thumbnail {
-    position: absolute;
-    top: 0;
-    left: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-
 /* Search */
-
 div.hd-search {
-    float: right;
+	float: right;
 }
 
 div.hd-search label {
-    display: none;
+	position: absolute;
+	left: -9999px;
 }
 
 div.hd-search #searchsubmit {
-    background: #006ec3;
-    color: #FFF;
-    padding: 5px 14px;
-    border: none;
-    vertical-align: top;
+	background-color: #006ec3;
+	color: #FFF;
+	padding: 5px 14px;
+	border: none;
+	vertical-align: top;
 }
 
 div.hd-search #s {
-    vertical-align: top;
-    padding: 3px 0;
+	vertical-align: top;
+	padding: 3px 0;
 }
