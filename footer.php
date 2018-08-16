@@ -1,5 +1,13 @@
     <footer class="site-footer">
 
+        <div class="footer-callout clearfix">
+            <div class="footer-callout-image"></div>
+            <div class="footer-callout-text">
+                <h2>Placeholder Heading</h2>
+                <p>Dummy lorem ipsum content here.</p>
+            </div>
+        </div>
+
         <div class="footer-widgets clearfix">
             <?php if (is_active_sidebar( 'footer1' )) : ?>
                 <div class="footer-widget-area"><?php dynamic_sidebar( 'footer1' ); ?></div>
